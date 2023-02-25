@@ -3,18 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MaterialModule } from './shared/material-module';
+import { PrimeNgModules } from './shared/primeng-module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    PrimeNgModules
   ],
   providers: [],
   bootstrap: [AppComponent]
