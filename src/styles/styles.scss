@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+$sm: 576px !default;
+$md: 768px !default;
+$lg: 992px !default;
+$xl: 1200px !default;
+$xxl: 1440px !default;
+
+$breakpoints: (
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+  'xl': $xl,
+  'xxl': $xxl,
+) !default;
+@use 'sass:map';
 
 html,
 body {
@@ -15,3 +29,137 @@ body {
 @import "../../node_modules/primeflex/primeflex.scss";
 @import "primeng/resources/primeng.min.css";
 @import "primeicons/primeicons.css";
+
+@function size-map($default, $prefix, $size: 30) {
+  $size-map: ();
+
+  /* Add content type objects to map */
+  $size-map: map.merge($default, ('#{$prefix}-min': min-content, '#{$prefix}-max': max-content, '#{$prefix}-fit': fit-content));
+
+  /* Add rem type objects to map */
+  $rem-map: ();
+  @for $i from 1 through $size {
+    $rem-map: map.merge(
+      $rem-map,
+      (
+        '#{$prefix}-#{$i}rem': $i*1rem,
+      )
+    );
+  }
+  $size-map: map.merge($size-map, $rem-map);
+
+  @return $size-map;
+}
+
+$height-properties: size-map(
+  (
+    'h-full': 100%,
+    'h-35-screen': 35vh,
+    'h-half-screen': 50vh,
+    'h-screen': 100vh,
+    'h-auto': auto,
+  ),
+  'h'
+);
+
+$width-properties: size-map(
+  (
+    'w-full': 100%,
+    'w-half': 50%,
+    'w-25-screen': 25vw,
+    'w-half-screen': 50vw,
+    'w-80-screen': 80vw,
+    'w-screen': 100vw,
+    'w-auto': auto,
+    'w-1': 8.3333%,
+    'w-2': 16.6667%,
+    'w-3': 25%,
+    'w-4': 33.3333%,
+    'w-5': 41.6667%,
+    'w-6': 50%,
+    'w-7': 58.3333%,
+    'w-8': 66.6667%,
+    'w-9': 75%,
+    'w-10': 83.3333%,
+    'w-11': 91.6667%,
+    'w-12': 100%,
+    'w-45rem': 45rem,
+  ),
+  'w'
+);
+
+$max-width-properties: size-map(
+  (
+    'max-w-0': 0px,
+    'max-w-full': 100%,
+    'max-w-half': 50%,
+    'max-w-screen': 100vw,
+  ),
+  'max-w'
+);
+
+$space-scales: 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 !global;
+$padding-properties: (
+  '': 'padding',
+  't': 'padding-top',
+  'r': 'padding-right',
+  'l': 'padding-left',
+  'b': 'padding-bottom',
+  'x': (
+    'padding-left',
+    'padding-right',
+  ),
+  'y': (
+    'padding-top',
+    'padding-bottom',
+  ),
+);
+
+$margin-properties: (
+  '': 'margin',
+  't': 'margin-top',
+  'r': 'margin-right',
+  'l': 'margin-left',
+  'b': 'margin-bottom',
+  'x': (
+    'margin-left',
+    'margin-right',
+  ),
+  'y': (
+    'margin-top',
+    'margin-bottom',
+  ),
+);
+
+$max-height-properties: size-map(
+  (
+    'max-h-0': 0px,
+    'max-h-full': 100%,
+    'max-h-35-screen': 35vh,
+    'max-h-half-screen': 50vh,
+    'max-h-screen': 100vh,
+  ),
+  'max-h'
+);
+
+$position-top-properties: size-map(
+  (
+    'top-auto': auto,
+    'top-4': 4rem,
+    'top-0': 0,
+    'top-50': 50%,
+    'top-100': 100%,
+  ),
+  'top'
+);
+
+@include spacing-class('p', $padding-properties, $space-scales);
+@include spacing-class('m', $margin-properties, $space-scales, true, true, true);
+@include style-class('width', $width-properties, true);
+@include style-class('height', $height-properties, true);
+@include style-class('min-width', $min-width-properties, true);
+@include style-class('max-width', $max-width-properties, true);
+@include style-class('min-height', $min-height-properties, true);
+@include style-class('max-height', $max-height-properties, true);
+@include style-class('top', $position-top-properties, true);
+

@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./modules/public/public.module').then((m) => m.publicModule),
+      import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
 ];
 
