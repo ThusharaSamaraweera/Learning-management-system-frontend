@@ -1,6 +1,18 @@
-<div class="h-3rem bg-blue-500 flex align-content-center">
-    <a class="text-2xl">{{ 'Home.SignInLbl' | transloco }}</a>
+<div
+  class="h-3rem bg-blue-500 flex align-content-center justify-content-end px-10 gap-3"
+>
+  <div
+    class="text-2xl flex align-items-center font-bold text-white cursor-pointer hover:underline"
+  >
+    {{ "Login" | uppercase }}
+  </div>
+  <div
+    class="text-2xl flex align-items-center font-bold text-white cursor-pointer hover:underline"
+  >
+    {{ "Signup" | uppercase }}
+  </div>
 </div>
+
 <p-carousel
   [value]="images"
   [numVisible]="1"
@@ -12,3 +24,5 @@
     <p-image [src]="item" alt="Image" width="100%" height="80%"></p-image>
   </ng-template>
 </p-carousel>
+
+<app-custom-modal></app-custom-modal>

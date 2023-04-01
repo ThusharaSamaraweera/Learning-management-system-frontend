@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslocoService } from '@ngneat/transloco';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
   constructor(
-    private translocoService: TranslocoService,
   ) {}
   images: any = [
     '../../../../../assets/images/img1.jpg',
