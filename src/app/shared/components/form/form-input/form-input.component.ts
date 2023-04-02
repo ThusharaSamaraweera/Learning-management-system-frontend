@@ -9,10 +9,10 @@ import {
 import { UntypedFormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-text-input',
-  templateUrl: './text-input.component.html',
+  selector: 'app-form-input',
+  templateUrl: './form-input.component.html',
 })
-export class TextInputComponent {
+export class FormInputComponent {
   @Input() inputType: string = 'text';
   @Input() placeholder!: string;
   @Input() customClasses!: string;

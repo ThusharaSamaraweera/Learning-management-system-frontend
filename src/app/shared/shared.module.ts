@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 // atoms and molecules
 import { CustomModalComponent } from './components/custom-modal/custom-modal.component';
-import { TextInputComponent } from './components/form/text-input/text-input.component';
+import { FormInputComponent } from './components/form/form-input/form-input.component';
+import { FormLabelComponent } from './components/form/form-label/form-label.component';
 
 // directives
 import {
@@ -24,7 +25,8 @@ import { CoreModule } from '../core/core.module';
   declarations: [
     //components
     CustomModalComponent,
-    TextInputComponent,
+    FormInputComponent,
+    FormLabelComponent,
     // directives
     NgCustomModalHeaderTemplateDirective,
     NgCustomModalContentTemplateDirective,
@@ -37,7 +39,8 @@ import { CoreModule } from '../core/core.module';
     PrimeNgModules,
     // custom components
     CustomModalComponent,
-    TextInputComponent,
+    FormInputComponent,
+    FormLabelComponent,
     //Directives
     NgCustomModalHeaderTemplateDirective,
     NgCustomModalContentTemplateDirective,
