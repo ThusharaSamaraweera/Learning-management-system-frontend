@@ -3,6 +3,7 @@
 >
   <div
     class="text-2xl flex align-items-center font-bold text-white cursor-pointer hover:underline"
+    (click)="toggleSignInModal(!signInModalVisibility)"
   >
     {{ "Login" | uppercase }}
   </div>
@@ -25,4 +26,13 @@
   </ng-template>
 </p-carousel>
 
-<app-custom-modal></app-custom-modal>
+<app-custom-modal
+  [visibility]="signInModalVisibility"
+  [width]="'40vw'"
+  (modalVisibility)="toggleSignInModal($event)"
+  [headerLbl]="'Login'"
+>
+  <ng-template appCustomModalContentTemplate>
+    <app-sign-in></app-sign-in>
+  </ng-template>
+</app-custom-modal>

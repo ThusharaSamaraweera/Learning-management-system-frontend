@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  constructor(
-  ) {}
+  signInModalVisibility: boolean = false
   images: any = [
     '../../../../../assets/images/img1.jpg',
     '../../../../../assets/images/img2.jpg'
@@ -27,4 +26,10 @@ export class HomeComponent {
       numScroll: 2,
     },
   ];
+  constructor(
+  ) {}
+
+  toggleSignInModal(visibility: boolean){
+    this.signInModalVisibility = visibility
+  }
 }
