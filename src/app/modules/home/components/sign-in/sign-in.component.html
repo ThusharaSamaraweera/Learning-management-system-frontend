@@ -1,6 +1,12 @@
-<div class="px-5">
+<div class="" [formGroup]="loginForm">
   <div class="flex gap-2 align-items-center justify-content-between">
-    <app-form-label [labelText]="'Email'" ></app-form-label>
-    <app-form-input></app-form-input>
+    <!-- <app-form-label [labelText]="'Emaild'" [labelClass]="customInputClass"></app-form-label> -->
+    <p>Email</p>
+    <app-text-input
+      class="w-25rem"
+      [control]="getLoginFormControl['email'] | formControl"
+      [customClasses]="customInputClass"
+    ></app-text-input>
   </div>
+
 </div>

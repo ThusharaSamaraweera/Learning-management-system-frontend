@@ -27,7 +27,8 @@ export class HomeComponent {
     },
   ];
   constructor(
-  ) {}
+  ) {
+  }
 
   toggleSignInModal(visibility: boolean){
     this.signInModalVisibility = visibility

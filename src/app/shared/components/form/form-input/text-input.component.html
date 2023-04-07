@@ -1,8 +1,8 @@
-<div [ngClass]="{ 'p-input-icon-right block': isServerSideSearch }">
-  <i *ngIf="isServerSideSearch" class="pi pi-spin pi-spinner"></i>
+<div [ngClass]="{ 'p-input-icon-right block': isServerSideSearch }" class="">
+  <i *ngIf="isServerSideSearch" class="pi pi-spin pi-spinner text-green-700"></i>
   <input
     #defaultInput
-    class="default-input default-text {{ customClasses }}"
+    class="w-full  {{ customClasses }}"
     pInputText
     [type]="inputType"
     [placeholder]="placeholder"
@@ -13,4 +13,5 @@
     (blur)="onBlur($event)"
     (ngModelChange)="onInputValueModelChange()"
   />
+  <div *ngIf="true">ddfs</div>
 </div>

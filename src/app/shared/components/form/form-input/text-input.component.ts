@@ -9,15 +9,15 @@ import {
 import { UntypedFormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-input',
-  templateUrl: './form-input.component.html',
+  selector: 'app-text-input',
+  templateUrl: './text-input.component.html',
 })
-export class FormInputComponent {
+export class TextInputComponent {
   @Input() inputType: string = 'text';
-  @Input() placeholder!: string;
+  @Input() placeholder: string  = 'hi';
   @Input() customClasses!: string;
   @Input() control!: UntypedFormControl;
-  @Input() isServerSideSearch: boolean = false;
+  @Input() isServerSideSearch: boolean = true;
   @Input() isNumeric: boolean = false;
   @Input() isAvoidSpaceKey: boolean = false;
   @Input() inUppercase: boolean = false;
