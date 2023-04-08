@@ -5,12 +5,12 @@
     class="text-2xl flex align-items-center font-bold text-white cursor-pointer hover:underline"
     (click)="toggleSignInModal(!signInModalVisibility)"
   >
-    {{ "Login" | uppercase }}
+    {{ "HomeModule.MainNavBar.LoginLbl" | transloco | uppercase }}
   </div>
   <div
     class="text-2xl flex align-items-center font-bold text-white cursor-pointer hover:underline"
   >
-    {{ "Signup" | uppercase }}
+    {{ "HomeModule.MainNavBar.SignUpLbl" | transloco | uppercase }}
   </div>
 </div>
 
@@ -29,7 +29,7 @@
 <app-custom-modal
   [visibility]="signInModalVisibility"
   (modalVisibility)="toggleSignInModal($event)"
-  [headerLbl]="'Login'"
+  [headerLbl]="'HomeModule.SignIn.Title' | transloco"
   width1440="40vw"
   width1200="75vw"
   width576="95vw"

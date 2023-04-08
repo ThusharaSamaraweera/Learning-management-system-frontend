@@ -1,5 +1,16 @@
 {
-  "Home": {
-    "SignInLbl": "Sign In"
+  "HomeModule": {
+    "MainNavBar": {
+      "LoginLbl": "Login",
+      "SignUpLbl":"Sign up"
+    },
+    "SignIn": {
+      "Title": "Login",
+      "EmailLbl": "Email",
+      "EmailPlaceholder": "Email",
+      "PasswordLbl": "Password",
+      "PasswordPlaceholder":"Password",
+      "SignInBtn":"Sign In"
+    }
   }
 }

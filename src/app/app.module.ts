@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TranslocoRootModule } from './core/services/transloco-root.module';
 import { preloadTranslations } from './preLoaders/preloadTranslations';
 import { PrimeNgModules } from './shared/primeng-module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,16 +20,18 @@ import { PrimeNgModules } from './shared/primeng-module';
     PrimeNgModules,
     TranslocoRootModule,
     BrowserAnimationsModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    HttpClientModule,
+
   ],
   bootstrap: [AppComponent],
   providers: [
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: preloadTranslations,
-    //   multi: true,
-    //   deps: [TranslocoService],
-    // },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: preloadTranslations,
+      multi: true,
+      deps: [TranslocoService],
+    },
   ]
 })
 export class AppModule { }

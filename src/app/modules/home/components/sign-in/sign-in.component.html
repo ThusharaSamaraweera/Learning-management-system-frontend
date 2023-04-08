@@ -3,18 +3,18 @@
     <div class="grid w-full justify-content-between align-items-center">
       <app-form-label
         class="col-3"
-        [labelText]="'Email'"
+        [labelText]="'HomeModule.SignIn.EmailLbl' | transloco"
         [labelClass]="customInputClass"
       ></app-form-label>
       <app-text-input
         class="col-9"
         [control]="getLoginFormControl['email'] | formControl"
         [customClasses]="customInputClass"
-        [placeholder]="'email'"
+        [placeholder]="'HomeModule.SignIn.EmailPlaceholder' | transloco"
       ></app-text-input>
       <app-form-label
         class="col-3"
-        [labelText]="'Password'"
+        [labelText]="'HomeModule.SignIn.PasswordLbl' | transloco"
         [labelClass]="customInputClass"
       ></app-form-label>
       <p-password
@@ -22,7 +22,7 @@
         styleClass="text-sm font-medium"
         [formControl]="getLoginFormControl['password'] | formControl"
         [feedback]="false"
-        placeholder="Password"
+        [placeholder]="'HomeModule.SignIn.PasswordPlaceholder' | transloco"
         [toggleMask]="true"
       ></p-password>
     </div>
