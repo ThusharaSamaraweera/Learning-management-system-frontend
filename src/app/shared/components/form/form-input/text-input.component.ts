@@ -17,7 +17,7 @@ export class TextInputComponent {
   @Input() placeholder: string  = 'hi';
   @Input() customClasses!: string;
   @Input() control!: UntypedFormControl;
-  @Input() isServerSideSearch: boolean = true;
+  @Input() isServerSideSearch: boolean = false;
   @Input() isNumeric: boolean = false;
   @Input() isAvoidSpaceKey: boolean = false;
   @Input() inUppercase: boolean = false;

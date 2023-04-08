@@ -4,11 +4,11 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  signInModalVisibility: boolean = false
+  signInModalVisibility: boolean = false;
   images: any = [
     '../../../../../assets/images/img1.jpg',
-    '../../../../../assets/images/img2.jpg'
-  ]
+    '../../../../../assets/images/img2.jpg',
+  ];
   responsiveOptions: any[] = [
     {
       breakpoint: '1024px',
@@ -26,11 +26,10 @@ export class HomeComponent {
       numScroll: 2,
     },
   ];
-  constructor(
-  ) {
-  }
+  
+  constructor() {}
 
-  toggleSignInModal(visibility: boolean){
-    this.signInModalVisibility = visibility
+  toggleSignInModal(visibility: boolean) {
+    this.signInModalVisibility = visibility;
   }
 }

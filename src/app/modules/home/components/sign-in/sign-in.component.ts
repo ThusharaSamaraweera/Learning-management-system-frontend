@@ -4,6 +4,7 @@ import {
   FormControl,
   FormGroup,
   UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 
@@ -12,12 +13,15 @@ import {
   templateUrl: './sign-in.component.html',
 })
 export class SignInComponent implements OnInit {
-  loginForm!: FormGroup;
+  loginForm!: UntypedFormGroup;
   customLabelClass: string = 'text-sm font-medium mb-0 mt-0 text-color-secondary';
   customInputClass: string = 'block w-full text-sm line-height-2';
   isServerSideSearch: boolean = true;
   constructor(private formBuilder: FormBuilder) {}
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    this.initializeLoginForm()
+  }
 
   initializeLoginForm = (): void => {
     this.loginForm = this.formBuilder.nonNullable.group({

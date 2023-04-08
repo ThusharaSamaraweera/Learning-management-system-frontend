@@ -1,12 +1,30 @@
 <div class="" [formGroup]="loginForm">
-  <div class="flex gap-2 align-items-center justify-content-between">
-    <!-- <app-form-label [labelText]="'Emaild'" [labelClass]="customInputClass"></app-form-label> -->
-    <p>Email</p>
-    <app-text-input
-      class="w-25rem"
-      [control]="getLoginFormControl['email'] | formControl"
-      [customClasses]="customInputClass"
-    ></app-text-input>
+  <div class="flex flex-column gap-2">
+    <div class="grid w-full justify-content-between align-items-center">
+      <app-form-label
+        class="col-3"
+        [labelText]="'Email'"
+        [labelClass]="customInputClass"
+      ></app-form-label>
+      <app-text-input
+        class="col-9"
+        [control]="getLoginFormControl['email'] | formControl"
+        [customClasses]="customInputClass"
+        [placeholder]="'email'"
+      ></app-text-input>
+      <app-form-label
+        class="col-3"
+        [labelText]="'Password'"
+        [labelClass]="customInputClass"
+      ></app-form-label>
+      <p-password
+        class="custom-password-login col-9"
+        styleClass="text-sm font-medium"
+        [formControl]="getLoginFormControl['password'] | formControl"
+        [feedback]="false"
+        placeholder="Password"
+        [toggleMask]="true"
+      ></p-password>
+    </div>
   </div>
-
 </div>

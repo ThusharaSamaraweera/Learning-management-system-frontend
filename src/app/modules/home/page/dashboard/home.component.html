@@ -28,9 +28,11 @@
 
 <app-custom-modal
   [visibility]="signInModalVisibility"
-  [width]="'40vw'"
   (modalVisibility)="toggleSignInModal($event)"
   [headerLbl]="'Login'"
+  width1440="40vw"
+  width1200="75vw"
+  width576="95vw"
 >
   <ng-template appCustomModalContentTemplate>
     <app-sign-in></app-sign-in>

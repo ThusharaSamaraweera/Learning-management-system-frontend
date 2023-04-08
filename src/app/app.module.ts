@@ -19,7 +19,16 @@ import { PrimeNgModules } from './shared/primeng-module';
     PrimeNgModules,
     TranslocoRootModule,
     BrowserAnimationsModule,
+    TranslocoRootModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: preloadTranslations,
+    //   multi: true,
+    //   deps: [TranslocoService],
+    // },
+  ]
 })
 export class AppModule { }
