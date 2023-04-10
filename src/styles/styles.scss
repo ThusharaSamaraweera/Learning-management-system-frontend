@@ -22,9 +22,10 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
 // theme
-@import "theme/theme.css";
+@import "theme/theme";
+// customizations
+@import 'common/common-index';
 // primeNG
 @import "primeflex/primeflex.scss";
 @import "primeng/resources/primeng.min.css";

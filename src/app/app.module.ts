@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     PrimeNgModules,
     TranslocoRootModule,
     BrowserAnimationsModule,
-    TranslocoRootModule,
     HttpClientModule,
 
   ],
