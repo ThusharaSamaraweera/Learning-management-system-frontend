@@ -1,3 +1,4 @@
+
 export interface IUser {
     id: number;
     firstName: string;
@@ -16,3 +17,15 @@ export enum USER_STATUS {
     USER = "USER",
     ADMIN = "ADMIN",
   }
+
+
+export interface signInResponse {
+    statusCode: number,
+    data: SignInResData
+}
+
+export interface SignInResData {
+    user: IUser,
+    token: string
+}
+

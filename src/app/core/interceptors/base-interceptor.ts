@@ -7,6 +7,7 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class APIInterceptor implements HttpInterceptor {
@@ -18,7 +19,7 @@ export class APIInterceptor implements HttpInterceptor {
     let isDone = false;
     if (req.url.includes('/assets/i18n/')) return next.handle(req);
 
-    let requestUrl = ``;
+    let requestUrl = `${environment.apiUrl}${req.url}`;
     let authToken = '';
 
     req = req.clone({

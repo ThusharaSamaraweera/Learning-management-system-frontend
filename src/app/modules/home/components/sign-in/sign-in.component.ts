@@ -8,7 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { lastValueFrom } from 'rxjs';
-import { HomeService } from '../../services/home.services';
+import { authService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -22,7 +22,7 @@ export class SignInComponent implements OnInit {
   isServerSideSearch: boolean = true;
   constructor(
     private formBuilder: FormBuilder,
-    private homeService: HomeService
+    private authService: authService
   ) {}
 
   ngOnInit(): void {
@@ -43,7 +43,7 @@ export class SignInComponent implements OnInit {
   async onSignIn() {
     try {
       const res = await lastValueFrom(
-        this.homeService.login(
+        this.authService.login(
           this.loginForm.get('email')?.value,
           this.loginForm.get('password')?.value
         )
