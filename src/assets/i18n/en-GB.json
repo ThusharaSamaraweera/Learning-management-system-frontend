@@ -1,16 +1,24 @@
 {
+  "Common": {},
   "HomeModule": {
     "MainNavBar": {
       "LoginLbl": "Login",
-      "SignUpLbl":"Sign up"
+      "SignUpLbl": "Sign up"
     },
     "SignIn": {
       "Title": "Login",
       "EmailLbl": "Email",
       "EmailPlaceholder": "Email",
       "PasswordLbl": "Password",
-      "PasswordPlaceholder":"Password",
-      "SignInBtn":"Sign In"
+      "PasswordPlaceholder": "Password",
+      "SignInBtn": "Sign In"
+    }
+  },
+  "Dashboard": {
+    "MainTopNavbar": {
+      "UserAvatarMenu": {
+        "Profile": "Profile"
+      }
     }
   }
 }

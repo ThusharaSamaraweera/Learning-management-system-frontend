@@ -20,6 +20,7 @@ import {
 // pipe
 import { FormControlPipe } from './pipe/formControl.pipe';
 import { CoreModule } from '../core/core.module';
+import { UserInitialsPipe } from './pipe/user-initials.pipe';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import { CoreModule } from '../core/core.module';
     NgCustomModalFooterTemplateDirective,
     // pipes
     FormControlPipe,
+    UserInitialsPipe
   ],
   imports: [PrimeNgModules, CommonModule, FormsModule, CoreModule],
   exports: [
     PrimeNgModules,
     // pipes
     FormControlPipe,
+    UserInitialsPipe,
     // custom components
     CustomModalComponent,
     TextInputComponent,
@@ -47,6 +50,7 @@ import { CoreModule } from '../core/core.module';
     NgCustomModalHeaderTemplateDirective,
     NgCustomModalContentTemplateDirective,
     NgCustomModalFooterTemplateDirective,
+  
   ],
   providers: [],
 })

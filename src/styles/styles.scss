@@ -167,3 +167,27 @@ $position-top-properties: size-map(
 @include style-class('max-height', $max-height-properties, true);
 @include style-class('top', $position-top-properties, true);
 
+/* check for changes in the avatar.scss file inside the components */
+/* there is a limitation in primeng avatar badge this is a fix for that*/
+.avatar-badge-1 {
+  overflow: visible !important;
+  .p-badge {
+    color: transparent;
+    width: 8px;
+    min-width: 8px;
+    height: 8px;
+    bottom: 0px !important;
+    top: 24px !important;
+    right: 2px;
+    border: 0.5px solid #fff;
+  }
+}
+
+.profile-menu-btn {
+  &:hover {
+    background-color: transparent !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+}

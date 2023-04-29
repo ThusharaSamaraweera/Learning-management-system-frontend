@@ -1,0 +1,36 @@
+<div class="card">
+  <p-megaMenu styleClass="flex justify-content-between">
+    <ng-template pTemplate="start">
+      <img src="./assets/images/uni-logo.png" height="40" class="mr-2" />
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div class="flex">
+        <div
+          class="flex align-items-center justify-content-center"
+          style="width: 36px; height: 36px"
+        >
+          <p-avatar
+            [label]="'user' | userInitials"
+            styleClass="avatar-badge-1"
+            size="large"
+            shape="circle"
+          ></p-avatar>
+        </div>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-angle-down"
+          class="p-button-sm p-button-rounded p-button-text w-2rem h-2rem text-color profile-menu-btn hidden md:flex"
+          (click)="menu.toggle($event)"
+        ></button>
+      </div>
+    </ng-template>
+  </p-megaMenu>
+</div>
+
+<p-menu
+  #menu
+  [popup]="true"
+  [model]="userAvatarMenuItems"
+  appendTo="body"
+></p-menu>
