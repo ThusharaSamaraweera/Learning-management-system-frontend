@@ -1,14 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { HomeComponent } from './page/dashboard/home.component';
 import { DashboardRoutingModule } from './dashboard.routing';
 import { CoreModule } from 'src/app/core/core.module';
 import { MainTopNavbarComponent } from './layouts/main-top-navbar/main-top-navbar.component';
+import { DashboardContentLayoutComponent } from './layouts/dashboard-content-layout/dashboard-content-layout.component';
+import { DashboardMainSidebarComponent } from './layouts/dashboard-main-sidenav/dashboard-main-sidenav.component';
 
 @NgModule({
   imports: [DashboardRoutingModule, SharedModule, CommonModule, CoreModule],
-  declarations: [DashboardComponent, MainTopNavbarComponent],
+  declarations: [HomeComponent, MainTopNavbarComponent, DashboardContentLayoutComponent, DashboardMainSidebarComponent],
   exports: [],
   providers: [],
 })

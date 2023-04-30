@@ -8,6 +8,9 @@ import { PasswordModule } from 'primeng/password';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
+import { TieredMenuModule } from 'primeng/tieredmenu';
+import { PanelMenuModule } from 'primeng/panelmenu';
+
 /**
  * NgModule that includes all primeNG modules that are required to serve the demo-app.
  */
@@ -22,7 +25,9 @@ import { MenuModule } from 'primeng/menu';
     PasswordModule,
     MegaMenuModule,
     AvatarModule,
-    MenuModule
+    MenuModule,
+    TieredMenuModule,
+    PanelMenuModule
   ],
 })
 export class PrimeNgModules {}
