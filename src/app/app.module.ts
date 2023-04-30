@@ -9,10 +9,12 @@ import { TranslocoRootModule } from './core/services/transloco-root.module';
 import { preloadTranslations } from './preLoaders/preloadTranslations';
 import { PrimeNgModules } from './shared/primeng-module';
 import { HttpClientModule } from '@angular/common/http';
+import { ContentLayoutComponent } from './core/layouts/content-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ContentLayoutComponent
   ],
   imports: [
     BrowserModule,
