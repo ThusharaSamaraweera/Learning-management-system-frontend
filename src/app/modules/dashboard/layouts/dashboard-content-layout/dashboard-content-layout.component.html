@@ -1,7 +1,21 @@
 <div class="h-full">
   <app-main-top-navbar></app-main-top-navbar>
+  <div class="block lg:hidden absolute dashboard-speed-dial-wrapper">
+    <p-speedDial
+      className="custom-speed-dial-dashboard-main speeddial-right"
+      [radius]="120"
+      showIcon="pi pi-bars"
+      hideIcon="pi pi-times"
+      direction="down-right"
+      type="quarter-circle"
+      buttonClassName="p-button-info"
+      (onClick)="onClickSpeedDial()"
+    ></p-speedDial>
+  </div>
   <div class="main-content flex">
-    <app-dashboard-main-sidenav class="h-full"></app-dashboard-main-sidenav>
-        <router-outlet #adminTemplateVar="outlet"></router-outlet>
+    <app-dashboard-main-sidenav
+      class="h-full hidden lg:block"
+    ></app-dashboard-main-sidenav>
+    <router-outlet #adminTemplateVar="outlet"></router-outlet>
   </div>
 </div>

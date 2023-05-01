@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { LevelEnum } from '../../dashboard.model';
@@ -7,7 +7,7 @@ import { LevelEnum } from '../../dashboard.model';
   selector: 'app-course',
   templateUrl: './courses.component.html',
 })
-export class CourseComponent {
+export class CourseComponent implements DoCheck{
   level!: any
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -15,9 +15,11 @@ export class CourseComponent {
 
   ) {}
 
+  ngDoCheck(): void {
+    this.level = this.activatedRoute.snapshot.queryParams['level']
+  }
+
   ngOnInit() {
-    this.level = this.activatedRoute.snapshot.queryParams
-    console.log("🚀 ~ file: courses.component.ts:19 ~ CourseComponent ~ ngOnInit ~ this.level:", this.level)
     
   }
 }

@@ -10,7 +10,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { PanelMenuModule } from 'primeng/panelmenu';
-
+import { SpeedDialModule } from 'primeng/speeddial';
 /**
  * NgModule that includes all primeNG modules that are required to serve the demo-app.
  */
@@ -27,7 +27,8 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     AvatarModule,
     MenuModule,
     TieredMenuModule,
-    PanelMenuModule
+    PanelMenuModule,
+    SpeedDialModule
   ],
 })
 export class PrimeNgModules {}

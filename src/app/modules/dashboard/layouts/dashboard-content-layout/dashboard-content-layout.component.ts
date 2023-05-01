@@ -6,5 +6,7 @@ import { Component } from "@angular/core";
     styleUrls: ['dashboard-content-layout.component.scss']
  })
  export class DashboardContentLayoutComponent {
-    
+    onClickSpeedDial(){
+      console.log('speed')
+    }
  }
