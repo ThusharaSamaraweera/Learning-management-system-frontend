@@ -10,12 +10,11 @@ import { preloadTranslations } from './preLoaders/preloadTranslations';
 import { PrimeNgModules } from './shared/primeng-module';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentLayoutComponent } from './core/layouts/content-layout.component';
+import { MainTopNavbarComponent } from './modules/dashboard/layouts/main-top-navbar/main-top-navbar.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContentLayoutComponent
-  ],
+  declarations: [AppComponent, ContentLayoutComponent, MainTopNavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,7 +22,7 @@ import { ContentLayoutComponent } from './core/layouts/content-layout.component'
     TranslocoRootModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
+    SharedModule,
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -33,6 +32,6 @@ import { ContentLayoutComponent } from './core/layouts/content-layout.component'
       multi: true,
       deps: [TranslocoService],
     },
-  ]
+  ],
 })
-export class AppModule { }
+export class AppModule {}

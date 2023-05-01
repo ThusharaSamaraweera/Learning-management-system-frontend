@@ -11,7 +11,7 @@ import { CourseComponent } from './page/course/courses.component';
 
 @NgModule({
   imports: [DashboardRoutingModule, SharedModule, CommonModule, CoreModule],
-  declarations: [HomeComponent, MainTopNavbarComponent, DashboardContentLayoutComponent, DashboardMainSidebarComponent, CourseComponent],
+  declarations: [HomeComponent, DashboardContentLayoutComponent, DashboardMainSidebarComponent, CourseComponent],
   exports: [],
   providers: [],
 })
