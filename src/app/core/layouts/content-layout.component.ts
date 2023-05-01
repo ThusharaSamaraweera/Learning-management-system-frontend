@@ -5,9 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './content-layout.component.html',
 })
 export class ContentLayoutComponent {
+  leftSidebarVisibility: boolean = false
   constructor() {}
 
   onClickSpeedDial(){
-    console.log('speed')
+    this.leftSidebarVisibility = true
+
   }
 }

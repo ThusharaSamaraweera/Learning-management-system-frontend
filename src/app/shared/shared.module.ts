@@ -21,6 +21,7 @@ import {
 import { FormControlPipe } from './pipe/formControl.pipe';
 import { CoreModule } from '../core/core.module';
 import { UserInitialsPipe } from './pipe/user-initials.pipe';
+import { CustomLeftSidebarComponent } from './components/custom-left-sidebar/custom-left-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { UserInitialsPipe } from './pipe/user-initials.pipe';
     CustomModalComponent,
     TextInputComponent,
     FormLabelComponent,
+    CustomLeftSidebarComponent,
     // directives
     NgCustomModalHeaderTemplateDirective,
     NgCustomModalContentTemplateDirective,
@@ -46,6 +48,7 @@ import { UserInitialsPipe } from './pipe/user-initials.pipe';
     CustomModalComponent,
     TextInputComponent,
     FormLabelComponent,
+    CustomLeftSidebarComponent,
     //Directives
     NgCustomModalHeaderTemplateDirective,
     NgCustomModalContentTemplateDirective,

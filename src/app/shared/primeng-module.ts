@@ -11,6 +11,7 @@ import { MenuModule } from 'primeng/menu';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { SpeedDialModule } from 'primeng/speeddial';
+import { SidebarModule } from 'primeng/sidebar';
 /**
  * NgModule that includes all primeNG modules that are required to serve the demo-app.
  */
@@ -28,7 +29,8 @@ import { SpeedDialModule } from 'primeng/speeddial';
     MenuModule,
     TieredMenuModule,
     PanelMenuModule,
-    SpeedDialModule
+    SpeedDialModule,
+    SidebarModule
   ],
 })
 export class PrimeNgModules {}
