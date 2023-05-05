@@ -5,7 +5,7 @@
           @include styleclass('p-4 md:p-7');
         }
         .p-sidebar-content {
-          @include styleclass('px-4 md:px-7 py-0 h-full');
+          @include styleclass('px-0 pt-0 pb-2 h-full');
         }
         .p-sidebar-footer {
           @include styleclass('hidden');

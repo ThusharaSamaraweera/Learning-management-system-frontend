@@ -12,11 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContentLayoutComponent } from './core/layouts/content-layout.component';
 import { MainTopNavbarComponent } from './modules/dashboard/layouts/main-top-navbar/main-top-navbar.component';
 import { SharedModule } from './shared/shared.module';
-import {
-  NgSidebarContentTemplateDirective,
-  NgSidebarFooterTemplateDirective,
-  NgSidebarHeaderTemplateDirective,
-} from './shared/directive/custom-sidebar-template.directive';
 
 @NgModule({
   declarations: [
