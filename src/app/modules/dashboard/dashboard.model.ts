@@ -4,3 +4,12 @@ export enum LevelEnum {
     LEVEL_3="level-3",
     LEVEL_4="level-4"
 }
+
+export interface ICourse{
+    id: string,
+    code?: string,
+    name?: string,
+    description?: string,
+    image?: string,
+    category?: string,
+}
