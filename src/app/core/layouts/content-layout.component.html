@@ -1,24 +1,4 @@
 <div class="h-screen">
-  <div>
     <app-main-top-navbar></app-main-top-navbar>
-    <div class="block lg:hidden absolute dashboard-speed-dial-wrapper">
-      <p-speedDial
-        className="custom-speed-dial-dashboard-main"
-        [radius]="120"
-        showIcon="pi pi-bars"
-        hideIcon="pi pi-times"
-        direction="down-right"
-        type="quarter-circle"
-        buttonClassName="p-button-info"
-        (onClick)="onClickSpeedDial()"
-      ></p-speedDial>
-    </div>
-  </div>
   <router-outlet></router-outlet>
 </div>
-
-<app-custom-left-sidebar
-  [position]="'left'"
-  [baseZIndex]="10000"
-  [visibility]="leftSidebarVisibility"
-></app-custom-left-sidebar>

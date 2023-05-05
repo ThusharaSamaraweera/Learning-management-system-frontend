@@ -6,5 +6,11 @@ import { Component } from "@angular/core";
     styleUrls: ['dashboard-content-layout.component.scss']
  })
  export class DashboardContentLayoutComponent {
-
+   leftSidebarVisibility: boolean = false
+   constructor() {}
+ 
+   onClickSpeedDial(){
+     this.leftSidebarVisibility = !this.leftSidebarVisibility
+ 
+   }
  }

@@ -12,7 +12,6 @@ export class CourseComponent implements DoCheck{
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router
-
   ) {}
 
   ngDoCheck(): void {

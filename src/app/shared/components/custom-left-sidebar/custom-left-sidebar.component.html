@@ -5,10 +5,10 @@
   [position]="position"
   [baseZIndex]="baseZIndex"
   [modal]="false"
-  [showCloseIcon]="false"
   [styleClass]="styleClass"
   [showCloseIcon]="showCloseIcon"
   (onHide)="hideSidebar()"
+  [fullScreen]="true"
 >
   <!-- template -->
   <ng-template *ngIf="sidebarHeaderTemplate" pTemplate="header">
