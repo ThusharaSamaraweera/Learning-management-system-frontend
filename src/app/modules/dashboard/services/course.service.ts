@@ -16,12 +16,36 @@ export class CourseService {
       name: 'cou 1',
     },
     {
-        id: '33',
-        name: 'cou 2',
-      },
+      id: '33',
+      name: 'cou 2',
+    },
+    {
+      id: '32',
+      name: 'cou 1',
+    },
+    {
+      id: '33',
+      name: 'cou 2',
+    },
+    {
+      id: '32',
+      name: 'cou 1',
+    },
+    {
+      id: '33',
+      name: 'cou 2',
+    },
+    {
+      id: '32',
+      name: 'cou 1',
+    },
+    {
+      id: '33',
+      name: 'cou 2',
+    },
   ];
 
-  getRecentCourses():Observable<ICourse[]> {
-    return of(this.courses)
+  getRecentCourses(): Observable<ICourse[]> {
+    return of(this.courses);
   }
 }

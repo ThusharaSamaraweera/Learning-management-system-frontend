@@ -7,11 +7,15 @@ import { CoreModule } from 'src/app/core/core.module';
 import { DashboardContentLayoutComponent } from './layouts/dashboard-content-layout/dashboard-content-layout.component';
 import { DashboardMainSidebarComponent } from './layouts/dashboard-main-sidenav/dashboard-main-sidenav.component';
 import { CourseComponent } from './page/course/courses.component';
+import { RecentCourseListComponent } from './components/recent-course-list/recent-course-list.component';
+import { CourseService } from './services/course.service';
 
 @NgModule({
   imports: [DashboardRoutingModule, SharedModule, CommonModule, CoreModule],
-  declarations: [HomeComponent, DashboardContentLayoutComponent, DashboardMainSidebarComponent, CourseComponent],
+  declarations: [HomeComponent, DashboardContentLayoutComponent, DashboardMainSidebarComponent, CourseComponent, RecentCourseListComponent],
   exports: [],
-  providers: [],
+  providers: [
+    CourseService
+  ],
 })
 export class DashboardModule {}
