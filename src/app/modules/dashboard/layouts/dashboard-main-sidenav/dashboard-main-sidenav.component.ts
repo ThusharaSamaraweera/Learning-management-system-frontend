@@ -29,27 +29,27 @@ export class DashboardMainSidebarComponent implements OnInit {
           {
             label: 'Level 1',
             icon: 'pi pi-fw pi-align-left',
-            routerLink: '/dashboard/course',
+            routerLink: `/dashboard/courses`,
             queryParams: { level: LevelEnum.LEVEL_1 },
           },
           {
             label: 'Level 2',
             icon: 'pi pi-fw pi-align-left',
-            routerLink: '/dashboard/course',
+            routerLink: '/dashboard/courses',
 
             queryParams: { level: LevelEnum.LEVEL_2 },
           },
           {
             label: 'Level 3',
             icon: 'pi pi-fw pi-align-left',
-            routerLink: '/dashboard/course',
+            routerLink: '/dashboard/courses',
 
             queryParams: { level: LevelEnum.LEVEL_3 },
           },
           {
             label: 'Level 4',
             icon: 'pi pi-fw pi-align-left',
-            routerLink: '/dashboard/course',
+            routerLink: '/dashboard/courses',
 
             queryParams: { level: LevelEnum.LEVEL_4 },
           },

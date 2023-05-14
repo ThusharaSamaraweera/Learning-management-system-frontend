@@ -7,15 +7,15 @@ import { LevelEnum } from '../../dashboard.model';
   selector: 'app-course',
   templateUrl: './courses.component.html',
 })
-export class CourseComponent implements DoCheck{
+export class CoursesComponent implements DoCheck{
   level!: any
   constructor(
     private activatedRoute: ActivatedRoute,
-    private router: Router
   ) {}
 
   ngDoCheck(): void {
-    this.level = this.activatedRoute.snapshot.queryParams['level']
+    this.level = this.activatedRoute.snapshot.queryParams?.['level']
+    console.log("🚀 ~ file: courses.component.ts:19 ~ CoursesComponent ~ ngDoCheck ~ this.level:", this.level)
   }
 
   ngOnInit() {
