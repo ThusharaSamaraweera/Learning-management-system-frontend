@@ -15,7 +15,6 @@ export class CoursesComponent implements DoCheck{
 
   ngDoCheck(): void {
     this.level = this.activatedRoute.snapshot.queryParams?.['level']
-    console.log("🚀 ~ file: courses.component.ts:19 ~ CoursesComponent ~ ngDoCheck ~ this.level:", this.level)
   }
 
   ngOnInit() {

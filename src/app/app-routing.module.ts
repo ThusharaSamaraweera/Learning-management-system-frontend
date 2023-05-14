@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardContentLayoutComponent } from './modules/dashboard/layouts/dashboard-content-layout/dashboard-content-layout.component';
 import { ContentLayoutComponent } from './core/layouts/content-layout.component';
+import { EventEmitterService } from './core/services/eventEmitter.service';
 
 const routes: Routes = [
   {
@@ -28,5 +29,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [EventEmitterService]
 })
 export class AppRoutingModule {}

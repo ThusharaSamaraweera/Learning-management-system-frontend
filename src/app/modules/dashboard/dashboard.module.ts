@@ -10,6 +10,7 @@ import { CoursesComponent } from './page/courses/courses.component';
 import { RecentCourseListComponent } from './components/recent-course-list/recent-course-list.component';
 import { CourseService } from './services/course.service';
 import { CourseComponent } from './page/course/course.component';
+import { EventEmitterService } from 'src/app/core/services/eventEmitter.service';
 
 @NgModule({
   imports: [DashboardRoutingModule, SharedModule, CommonModule, CoreModule],
@@ -22,6 +23,6 @@ import { CourseComponent } from './page/course/course.component';
     CourseComponent,
   ],
   exports: [],
-  providers: [CourseService],
+  providers: [CourseService, EventEmitterService],
 })
 export class DashboardModule {}
