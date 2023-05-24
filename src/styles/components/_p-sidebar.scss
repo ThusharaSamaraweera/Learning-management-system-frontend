@@ -1,0 +1,15 @@
+.custom-sidebar{
+    &-main-left {
+        @include styleclass('overflow-x-hidden');
+        .p-sidebar-header {
+          @include styleclass('p-4 md:p-7');
+        }
+        .p-sidebar-content {
+          @include styleclass('px-0 pt-0 pb-2 h-full');
+        }
+        .p-sidebar-footer {
+          @include styleclass('hidden');
+        }
+        @include styleclass('w-full md:w-25rem lg:w-40rem xl:w-46rem');
+      }
+}

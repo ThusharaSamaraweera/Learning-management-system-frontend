@@ -1,0 +1,19 @@
+<p-dialog
+  [header]="headerLbl"
+  [(visible)]="visibility"
+  [breakpoints]="{'1440px': width1440, '1200px': width1200, '576px': width576}"
+  [style]="{ width: width }"
+  (onHide)="closeModal()"
+>
+  <ng-template pTemplate="header" *ngIf="modalHeaderTemplate">
+    <ng-container [ngTemplateOutlet]="modalHeaderTemplate"></ng-container>
+  </ng-template>
+
+  <ng-template *ngIf="modalContentTemplate" pTemplate="content">
+    <ng-container [ngTemplateOutlet]="modalContentTemplate"></ng-container>
+  </ng-template>
+
+  <ng-template pTemplate="footer" *ngIf="modalFooterTemplate">
+    <ng-container [ngTemplateOutlet]="modalFooterTemplate"></ng-container>
+  </ng-template>
+</p-dialog>

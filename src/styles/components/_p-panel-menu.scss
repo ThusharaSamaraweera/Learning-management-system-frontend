@@ -1,0 +1,10 @@
+.custom-panel-menu {
+    &-dashboard-main {
+        @include styleclass('w-full lg:w-16rem block');
+        .p-panelmenu{
+            // background-color: red;
+            height: 100%;
+            background-color: #f1f5f9;
+        }
+    }
+}

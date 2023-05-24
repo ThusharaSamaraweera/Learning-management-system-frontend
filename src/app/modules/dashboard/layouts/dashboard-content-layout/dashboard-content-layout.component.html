@@ -1,0 +1,35 @@
+<div class="main-content flex">
+  <app-dashboard-main-sidenav
+    class="h-full hidden lg:block"
+  ></app-dashboard-main-sidenav>
+  <router-outlet #adminTemplateVar="outlet"></router-outlet>
+</div>
+
+
+<div class="block lg:hidden absolute dashboard-speed-dial-wrapper">
+  <p-speedDial
+    className="custom-speed-dial-dashboard-main"
+    [radius]="120"
+    showIcon="pi pi-bars"
+    hideIcon="pi pi-times"
+    direction="down-right"
+    type="quarter-circle"
+    buttonClassName="p-button-info"
+    (onClick)="onClickSpeedDial()"
+  ></p-speedDial>
+</div>
+
+<app-custom-left-sidebar
+  [position]="'left'"
+  [baseZIndex]="10000"
+  [visibility]="leftSidebarVisibility"
+  [styleClass]="'custom-sidebar-main-left'"
+  [showCloseIcon]="true"
+>
+  <ng-template appSidebarHeaderTemplate>
+    <!-- <span class="text-2xl text-color font-medium line-height-2"></span> -->
+  </ng-template>
+  <ng-template appSidebarContentTemplate>
+    <app-dashboard-main-sidenav></app-dashboard-main-sidenav>
+  </ng-template>
+</app-custom-left-sidebar>

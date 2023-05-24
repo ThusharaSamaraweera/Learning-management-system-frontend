@@ -1,0 +1,17 @@
+<div [ngClass]="{ 'p-input-icon-right block': isServerSideSearch }" class="">
+  <i *ngIf="isServerSideSearch" class="pi pi-spin pi-spinner text-green-700"></i>
+  <input
+    #defaultInput
+    class="w-full  {{ customClasses }}"
+    pInputText
+    [type]="inputType"
+    [placeholder]="placeholder"
+    [formControl]="control | formControl"
+    (keydown)="onKeyDownHandler($event)"
+    [class.is-invalid]="control.touched && control.invalid"
+    (keyup)="onKeyUpEvent($event)"
+    (blur)="onBlur($event)"
+    (ngModelChange)="onInputValueModelChange()"
+  />
+</div>
+<!-- <input pInputText [placeholder]="placeholder" [formControl]="control | formControl" [type]="inputType" class="w-full  {{ customClasses }}"/> -->

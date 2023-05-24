@@ -1,0 +1,23 @@
+<p-sidebar
+  #topLevelSidebar
+  [dismissible]="false"
+  [(visible)]="visibility"
+  [position]="position"
+  [baseZIndex]="baseZIndex"
+  [modal]="false"
+  [styleClass]="styleClass"
+  [showCloseIcon]="showCloseIcon"
+  (onHide)="hideSidebar()"
+  [fullScreen]="true"
+>
+  <!-- template -->
+  <ng-template *ngIf="sidebarHeaderTemplate" pTemplate="header">
+    <ng-container [ngTemplateOutlet]="sidebarHeaderTemplate"></ng-container>
+  </ng-template>
+  <ng-template *ngIf="sidebarContentTemplate" pTemplate="content">
+    <ng-container [ngTemplateOutlet]="sidebarContentTemplate"></ng-container>
+  </ng-template>
+  <ng-template *ngIf="sidebarFooterTemplate" pTemplate="footer">
+    <ng-container [ngTemplateOutlet]="sidebarFooterTemplate"> </ng-container>
+  </ng-template>
+</p-sidebar>
